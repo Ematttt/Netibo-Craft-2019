@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netibo Craft</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1d3b8b90fb.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/logo.png" type="image/png" />
+
+</head>
+<body class="products">
+
+  <!-- Background is handled by ::before in CSS -->
+
+  <!-- Header & Nav -->
+  <header>
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a class="active" href="products.html">PRODUCTS</a>
+        <a href="callus.html">CONTACT US</a>
+      </div>
+      <div class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i><span id="cartCount">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="⌕">
+      <button onclick="searchProducts()">Search</button>
+    </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <button>TABLES</button>
+    <button>CHAIRS</button>
+    <button>LAMP</button>
+    <button>HAMMOCK</button>
+  </aside>
+
+  <!-- Product List -->
+  <main id="productContainer"></main>
+
+  <!-- Cart -->
+  <section class="cart hidden" id="cart">
+    <h2>Cart</h2>
+    <ul id="cartItems"></ul>
+  </section>
+
+  <!-- Modal -->
+  <div id="productModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h2 id="modalProductName"></h2>
+      <img id="modalProductImage" src="" alt="">
+      <p id="modalProductDescription"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

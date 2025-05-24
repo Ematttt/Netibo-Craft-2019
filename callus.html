@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netibo Craft</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1d3b8b90fb.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/logo.png" type="image/png" />
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <nav class="nav-links">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="products.html">PRODUCTS</a>
+        <a class="active" href="callus.html">CONTACT US</a>
+      </nav>
+      <div class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i><span id="cartCount">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="callus">
+    <div class="callus-left">
+      <h1>Netibo Craft</h1>
+      <div class="callus-content-wrapper">
+        <!-- Image (left) -->
+        <div class="callus-image">
+          <img src="images/logo.png" alt="Netibo Craft Contact" />
+        </div>
+        
+        <!-- Feedback Section (middle) -->
+        <div class="feedback-section">
+          <h2>Send Feedback</h2>
+          <p class="feedback-text">Have something to share with us?</p>
+          <button class="feedback-button" onclick="sendFeedback()">
+            SEND YOUR FEEDBACK HERE
+          </button>
+        </div>
+        
+        <!-- Contact Info (right) -->
+        <section class="callus-section">
+          <p>
+            <i class="fa-solid fa-phone"></i> 0956-266-8457
+          </p>
+          <p>
+            <i class="fa-brands fa-facebook"></i> Netibo
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i> netibocraft2019@gmail.com
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function sendFeedback() {
+      const subject = encodeURIComponent('Customer Feedback - Netibo Craft');
+      const email = 'netibocraft2019@gmail.com';
+      
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&to=${email}&su=${subject}`;
+      
+      // Open Gmail compose in a new tab
+      window.open(gmailUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
